@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,24 +15,47 @@
     }
     header {
       padding: 60px 20px;
+      animation: fadeIn 1.5s ease;
     }
     h1 span {
       color: #38bdf8;
     }
+    img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #38bdf8;
+    }
     section {
       padding: 40px 20px;
+      animation: fadeInUp 1.2s ease;
     }
     .card {
       background: #1e293b;
       margin: 15px auto;
       padding: 20px;
-      max-width: 400px;
-      border-radius: 10px;
+      max-width: 420px;
+      border-radius: 12px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
       padding: 20px;
       font-size: 14px;
       color: #94a3b8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -40,6 +63,7 @@
 <body>
 
 <header>
+  <img src="profile.jpg" alt="Mukesh">
   <h1>Hi, I’m <span>Mukesh</span> 👋</h1>
   <p>B.Tech AI & Data Science Student</p>
 </header>
@@ -47,27 +71,33 @@
 <section>
   <h2>About Me</h2>
   <div class="card">
-    <p>
-      I’m a beginner in web development, learning step by step.
-      I love technology, AI, and building things on the internet.
-    </p>
+    I’m a passionate student exploring web development and AI.
+    I believe in learning step by step and building things that matter.
   </div>
 </section>
 
 <section>
   <h2>Skills</h2>
-  <div class="card">HTML & CSS (Beginner)</div>
+  <div class="card">HTML & CSS</div>
   <div class="card">Python (Learning)</div>
-  <div class="card">AI & Data Science (Student)</div>
+  <div class="card">AI & Data Science</div>
 </section>
 
 <section>
   <h2>Projects</h2>
-  <div class="card">Portfolio Website (This one 😄)</div>
+  <div class="card">Personal Portfolio Website</div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    📧 Email: <a href="mailto:smileymukesh2008@gmail.com">smileymukesh2008@gmail.com</a><br><br>
+    📸 Instagram: <a href="https://instagram.com/drama_x_bluz" target="_blank">@drama_x_bluz</a>
+  </div>
 </section>
 
 <footer>
-  © 2025 Mukesh. Built with ❤️
+  © 2025 Mukesh • Built with ❤️ & consistency
 </footer>
 
 </body>
