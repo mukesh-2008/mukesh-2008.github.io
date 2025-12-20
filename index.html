@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,181 +6,125 @@
   <title>Mukesh | Portfolio</title>
 
   <style>
-   /* RESET OVERLAP PROBLEM */
-section {
-  padding: 90px 20px;
-  position: relative;
-}
-
-.card {
-  margin: 20px auto;
-}
-
-/* Fix skills stacking */
-.skills, .projects {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Mobile safety */
-@media (max-width: 768px) {
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
-   section {
-  padding: 80px 20px;
-}
-
-.slot {
-  width: 60px;
-  height: 4px;
-  background: #38bdf8;
-  margin: 60px auto 0 auto;
-  border-radius: 10px;
-  opacity: 0.6;
-}
-   .chat-box {
-  max-width: 600px;
-  margin: 20px auto;
-  background: #020617;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: left;
-}
-
-.bot-msg, .user-msg {
-  margin: 10px 0;
-  padding: 12px 16px;
-  border-radius: 12px;
-  max-width: 85%;
-  animation: fadeInUp 0.5s ease;
-}
-
-.bot-msg {
-  background: #1e293b;
-}
-
-.user-msg {
-  background: #38bdf8;
-  color: #020617;
-  margin-left: auto;
-}
-
-.chat-buttons {
-  margin-top: 15px;
-}
-
-.chat-buttons button {
-  margin: 6px;
-  padding: 10px 18px;
-  border-radius: 20px;
-  border: none;
-  background: #38bdf8;
-  color: #020617;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.chat-buttons button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(56,189,248,0.4);
-    }
-   .cursor {
-  display: inline-block;
-  margin-left: 3px;
-  color: #38bdf8;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
     body {
-     img {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  border: 3px solid #38bdf8;
-  animation: photoPop 1.5s ease forwards;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #38bdf8;
-}
-
-@keyframes photoPop {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
       text-align: center;
     }
+
     header {
-     header {
-  padding: 100px 20px;
-}
-      padding: 60px 20px;
-      animation: fadeIn 1.5s ease;
+      padding: 100px 20px;
     }
+
     h1 span {
       color: #38bdf8;
     }
-    img {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-      border: 3px solid #38bdf8;
-    }
+
     section {
-      padding: 40px 20px;
-      animation: fadeInUp 1.2s ease;
+      padding: 90px 20px;
     }
+
+    .slot {
+      width: 60px;
+      height: 4px;
+      background: #38bdf8;
+      margin: 60px auto;
+      border-radius: 10px;
+      opacity: 0.6;
+    }
+
     .card {
       background: #1e293b;
-      margin: 15px auto;
       padding: 20px;
+      margin: 20px auto;
       max-width: 420px;
       border-radius: 12px;
     }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
+
+    /* Buttons */
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 26px;
+      border-radius: 30px;
       font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
     }
-    footer {
+
+    .btn.primary {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .btn.secondary {
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Chat */
+    .chat-box {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #020617;
       padding: 20px;
-      font-size: 14px;
+      border-radius: 15px;
+      text-align: left;
+    }
+
+    .bot-msg, .user-msg {
+      margin: 10px 0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      max-width: 85%;
+    }
+
+    .bot-msg {
+      background: #1e293b;
+    }
+
+    .user-msg {
+      background: #38bdf8;
+      color: #020617;
+      margin-left: auto;
+    }
+
+    .chat-buttons {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .chat-buttons button {
+      margin: 6px;
+      padding: 10px 18px;
+      border-radius: 20px;
+      border: none;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 30px 20px;
       color: #94a3b8;
+      font-size: 14px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -188,113 +132,99 @@ img:hover {
 <body>
 
 <header>
-  <h1>Hi, I’m <span id="typing"></span><span class="cursor">|</span></h1>
+  <h1>Hi, I’m <span>Mukesh</span> 👋</h1>
   <p>B.Tech AI & Data Science Student</p>
- <div class="buttons">
-  <a href="#contact" class="btn primary">Contact Me</a>
-  <a href="#projects" class="btn secondary">View Projects</a>
-</div>
+
+  <div class="buttons">
+    <a href="#chat" class="btn primary">Chat with Me</a>
+    <a href="#contact" class="btn secondary">Contact</a>
+  </div>
 </header>
 
+<div class="slot"></div>
+
 <section>
- <div class="slot"></div>
   <h2>About Me</h2>
   <div class="card">
-    I’m a passionate student exploring web development and AI.
-    I believe in learning step by step and building things that matter.
+    I’m a passionate AI & Data Science student who loves learning step by step
+    and building things with meaning.
   </div>
 </section>
 
-<section
- <div class="slot"></div>
+<div class="slot"></div>
+
+<section>
   <h2>Skills</h2>
   <div class="card">HTML & CSS</div>
   <div class="card">Python (Learning)</div>
   <div class="card">AI & Data Science</div>
 </section>
 
-<section>
- <div class="slot"></div>
-  <h2>Projects</h2>
-  <div class="card">Personal Portfolio Website</div>
-</section>
+<div class="slot"></div>
 
-<section>
- <div class="slot"></div>
-  <h2>Contact</h2>
-  <div class="card">
-    📧 Email: <a href="mailto:smileymukesh2008@gmail.com">smileymukesh2008@gmail.com</a><br><br>
-    📸 Instagram: <a href="https://instagram.com/drama_x_bluz" target="_blank">@drama_x_bluz</a>
-  </div>
-</section>
- <div class="slot"></div>
-<section class="reveal" id="chat">
+<section id="chat">
   <h2>Chat with Me 🤖</h2>
 
   <div class="chat-box" id="chatBox">
-    <div class="bot-msg">Hi 👋 I’m Mukesh.<br>I’m an AI & Data Science student.<br>What do you want to know?</div>
+    <div class="bot-msg">
+      Hi 👋 I’m Mukesh.  
+      What do you want to know?
+    </div>
   </div>
 
   <div class="chat-buttons">
-    <button onclick="sendReply('about')">About Me</button>
+    <button onclick="sendReply('about')">About</button>
     <button onclick="sendReply('skills')">Skills</button>
     <button onclick="sendReply('projects')">Projects</button>
     <button onclick="sendReply('contact')">Contact</button>
   </div>
 </section>
+
+<div class="slot"></div>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    📧 smileymukesh2008@gmail.com <br><br>
+    📸 Instagram: @drama_x_bluz
+  </div>
+</section>
+
 <footer>
-  © 2025 Mukesh • Built with ❤️ & consistency
+  © 2025 Mukesh • Built calmly 🤍
 </footer>
 
-   <script>
-  // ===== Typing Effect =====
-  const text = "Mukesh 👋";
-  let index = 0;
-
-  function typeEffect() {
-    if (index < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeEffect, 120);
-    }
-  }
-
-  // ===== Chat Reply =====
+<script>
   function sendReply(type) {
     const chatBox = document.getElementById("chatBox");
 
-    let userText = "";
-    let botText = "";
+    let user = "";
+    let bot = "";
 
     if (type === "about") {
-      userText = "Tell me about yourself";
-      botText = "I’m Mukesh, a B.Tech AI & Data Science student who enjoys learning step by step and building meaningful projects.";
+      user = "Tell me about yourself";
+      bot = "I’m Mukesh, an AI & Data Science student who believes in steady growth and clean work.";
     }
-
     if (type === "skills") {
-      userText = "What are your skills?";
-      botText = "HTML, CSS, Python (learning), and exploring AI & Data Science concepts.";
+      user = "What are your skills?";
+      bot = "HTML, CSS, Python (learning), and AI & Data Science fundamentals.";
     }
-
     if (type === "projects") {
-      userText = "Show me your projects";
-      botText = "This portfolio is my first project. More coming soon 🚀";
+      user = "What projects have you done?";
+      bot = "This portfolio is my first project. Bigger things are coming 🚀";
     }
-
     if (type === "contact") {
-      userText = "How can I contact you?";
-      botText = "Email: smileymukesh2008@gmail.com | Instagram: @drama_x_bluz";
+      user = "How can I contact you?";
+      bot = "Email me at smileymukesh2008@gmail.com or DM me on Instagram @drama_x_bluz 😊";
     }
 
-    chatBox.innerHTML += `<div class="user-msg">${userText}</div>`;
+    chatBox.innerHTML += `<div class="user-msg">${user}</div>`;
     setTimeout(() => {
-      chatBox.innerHTML += `<div class="bot-msg">${botText}</div>`;
+      chatBox.innerHTML += `<div class="bot-msg">${bot}</div>`;
       chatBox.scrollTop = chatBox.scrollHeight;
     }, 400);
   }
-
-  // Run typing after page load
-  window.addEventListener("load", typeEffect);
 </script>
+
 </body>
 </html>
