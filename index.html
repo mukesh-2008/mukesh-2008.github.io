@@ -215,5 +215,39 @@ img:hover {
 
   window.onload = typeEffect;
 </script>
+ <script>
+  function sendReply(type) {
+    const chatBox = document.getElementById("chatBox");
+
+    let userText = "";
+    let botText = "";
+
+    if (type === "about") {
+      userText = "Tell me about yourself";
+      botText = "I’m Mukesh, a B.Tech AI & Data Science student who loves learning step by step and building meaningful things.";
+    }
+
+    if (type === "skills") {
+      userText = "What are your skills?";
+      botText = "I work with HTML, CSS, Python (learning), and I’m exploring AI & Data Science concepts.";
+    }
+
+    if (type === "projects") {
+      userText = "Show me your projects";
+      botText = "Right now, this portfolio is my main project. More coming soon 🚀";
+    }
+
+    if (type === "contact") {
+      userText = "How can I contact you?";
+      botText = "You can email me at smileymukesh2008@gmail.com or DM me on Instagram @drama_x_bluz 😊";
+    }
+
+    chatBox.innerHTML += `<div class="user-msg">${userText}</div>`;
+    setTimeout(() => {
+      chatBox.innerHTML += `<div class="bot-msg">${botText}</div>`;
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }, 500);
+  }
+</script>
 </body>
 </html>
