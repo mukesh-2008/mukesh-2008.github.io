@@ -200,22 +200,20 @@ img:hover {
   © 2025 Mukesh • Built with ❤️ & consistency
 </footer>
 
- <script>
+   <script>
+  // ===== Typing Effect =====
   const text = "Mukesh 👋";
   let index = 0;
-  const speed = 120;
 
   function typeEffect() {
     if (index < text.length) {
       document.getElementById("typing").innerHTML += text.charAt(index);
       index++;
-      setTimeout(typeEffect, speed);
+      setTimeout(typeEffect, 120);
     }
   }
 
-  window.onload = typeEffect;
-</script>
- <script>
+  // ===== Chat Reply =====
   function sendReply(type) {
     const chatBox = document.getElementById("chatBox");
 
@@ -224,30 +222,33 @@ img:hover {
 
     if (type === "about") {
       userText = "Tell me about yourself";
-      botText = "I’m Mukesh, a B.Tech AI & Data Science student who loves learning step by step and building meaningful things.";
+      botText = "I’m Mukesh, a B.Tech AI & Data Science student who enjoys learning step by step and building meaningful projects.";
     }
 
     if (type === "skills") {
       userText = "What are your skills?";
-      botText = "I work with HTML, CSS, Python (learning), and I’m exploring AI & Data Science concepts.";
+      botText = "HTML, CSS, Python (learning), and exploring AI & Data Science concepts.";
     }
 
     if (type === "projects") {
       userText = "Show me your projects";
-      botText = "Right now, this portfolio is my main project. More coming soon 🚀";
+      botText = "This portfolio is my first project. More coming soon 🚀";
     }
 
     if (type === "contact") {
       userText = "How can I contact you?";
-      botText = "You can email me at smileymukesh2008@gmail.com or DM me on Instagram @drama_x_bluz 😊";
+      botText = "Email: smileymukesh2008@gmail.com | Instagram: @drama_x_bluz";
     }
 
     chatBox.innerHTML += `<div class="user-msg">${userText}</div>`;
     setTimeout(() => {
       chatBox.innerHTML += `<div class="bot-msg">${botText}</div>`;
       chatBox.scrollTop = chatBox.scrollHeight;
-    }, 500);
+    }, 400);
   }
+
+  // Run typing after page load
+  window.addEventListener("load", typeEffect);
 </script>
 </body>
 </html>
