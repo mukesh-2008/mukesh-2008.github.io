@@ -136,5 +136,20 @@ img:hover {
   © 2025 Mukesh • Built with ❤️ & consistency
 </footer>
 
+ <script>
+  const text = "Mukesh 👋";
+  let index = 0;
+  const speed = 120;
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  window.onload = typeEffect;
+</script>
 </body>
 </html>
