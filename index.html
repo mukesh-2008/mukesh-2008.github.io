@@ -203,6 +203,42 @@
 </footer>
 
 <script>
+const texts = [
+  "AI & Data Science Student",
+  "Aspiring Machine Learning Engineer",
+  "Problem Solver",
+  "Tech Explorer",
+  "Future Innovator"
+];
+
+let index = 0;
+let charIndex = 0;
+let currentText = "";
+let isDeleting = false;
+const speed = 120;
+
+const textElement = document.getElementById("rotating-text");
+
+function typeEffect() {
+  if (!isDeleting && charIndex < texts[index].length) {
+    currentText += texts[index].charAt(charIndex);
+    charIndex++;
+  } 
+  else if (isDeleting && charIndex > 0) {
+    currentText = currentText.slice(0, -1);
+    charIndex--;
+  } 
+  else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) index = (index + 1) % texts.length;
+  }
+
+  textElement.textContent = currentText;
+  setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+</script>
   function sendReply(type) {
     const chatBox = document.getElementById("chatBox");
 
