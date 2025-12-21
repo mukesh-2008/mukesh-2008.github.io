@@ -187,3 +187,9 @@ footer {
     margin: 0 10px;
   }
 }
+.tagline {
+  font-size: 18px;
+  color: #38bdf8;
+  margin: 10px 0 18px;
+  font-weight: 500;
+}
