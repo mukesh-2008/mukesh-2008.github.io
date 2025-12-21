@@ -380,3 +380,12 @@ footer {
     font-size: 36px;
   }
 }
+/* Instagram Highlight */
+.contact-links a:nth-child(4) {
+  border-color: #f472b6;
+  color: #f472b6;
+}
+
+.contact-links a:nth-child(4):hover {
+  box-shadow: 0 14px 30px rgba(244,114,182,0.35);
+}
