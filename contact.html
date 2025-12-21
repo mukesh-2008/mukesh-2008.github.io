@@ -76,34 +76,13 @@
   <footer>
     © 2025 Mukesh
   </footer>
-<!-- Cute AI Bot -->
- <div class="ai-bot" id="aiBot">
+<div class="ai-bot" id="aiBot">
+  <div class="bot-glow"></div>
   <div class="bot-face">
-    <span class="eye left"></span>
-    <span class="eye right"></span>
+    <span class="eye"></span>
+    <span class="eye"></span>
   </div>
-  <div class="bot-msg">Hi 👋</div>
+  <div class="bot-msg">Hey 👋 I’m here</div>
 </div>
-  <script>
-  const bot = document.getElementById("aiBot");
-
-  let mouseX = 0, mouseY = 0;
-  let botX = 0, botY = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX - 40;
-    mouseY = e.clientY - 40;
-  });
-
-  function followMouse() {
-    botX += (mouseX - botX) * 0.05;
-    botY += (mouseY - botY) * 0.05;
-
-    bot.style.transform = `translate(${botX}px, ${botY}px)`;
-    requestAnimationFrame(followMouse);
-  }
-
-  followMouse();
-</script>
 </body>
 </html>
