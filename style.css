@@ -392,8 +392,8 @@ footer {
 /* AI BOT */
 .ai-bot {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  top: 0;
+  left: 0;
   width: 70px;
   height: 70px;
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
