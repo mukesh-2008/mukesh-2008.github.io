@@ -223,4 +223,6 @@ section {
     transform: translateY(0);
   }
 }
-
+.container {
+  animation: fadeUp 0.9s ease both;
+}
