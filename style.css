@@ -389,3 +389,67 @@ footer {
 .contact-links a:nth-child(4):hover {
   box-shadow: 0 14px 30px rgba(244,114,182,0.35);
 }
+/* AI BOT */
+.ai-bot {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(56,189,248,0.4);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.bot-face {
+  position: relative;
+  width: 30px;
+  height: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eye {
+  width: 6px;
+  height: 6px;
+  background: #020617;
+  border-radius: 50%;
+  animation: blink 4s infinite;
+}
+
+.bot-msg {
+  position: absolute;
+  bottom: 85px;
+  right: 0;
+  background: #020617;
+  color: #e5e7eb;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.ai-bot:hover .bot-msg {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes blink {
+  0%, 95%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.1); }
+}
