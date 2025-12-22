@@ -281,7 +281,10 @@ hr {
   align-items: center;
   gap: 45px;
 }
-
+.contact {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #020617, #0f172a);
+}
 .contact-form {
   width: 100%;
   max-width: 520px;
