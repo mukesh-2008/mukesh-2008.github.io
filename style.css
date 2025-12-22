@@ -491,3 +491,8 @@ footer {
   50% { opacity: 0.8; }
   100% { opacity: 0.4; }
 }
+/* REMOVE BIG ROUND BACKGROUND */
+.contact::before,
+.contact::after {
+  display: none !important;
+}
