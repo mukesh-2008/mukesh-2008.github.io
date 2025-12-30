@@ -84,5 +84,29 @@
   </div>
   <div class="bot-msg">Hey 👋 I’m here</div>
 </div>
+  <script>
+  const bot = document.getElementById("aiBot");
+  const botMsg = bot.querySelector(".bot-msg");
+
+  const botMessages = [
+    "Building fundamentals 🧱",
+    "Slow growth > fast hype",
+    "Learning every day 📚",
+    "Portfolio in progress 🚧",
+    "Consistency beats motivation",
+    "Ask me about Mukesh 👋"
+  ];
+
+  let msgIndex = 0;
+
+  bot.addEventListener("click", () => {
+    msgIndex = (msgIndex + 1) % botMessages.length;
+    botMsg.textContent = botMessages[msgIndex];
+
+    // small feedback animation
+    botMsg.style.opacity = "1";
+    botMsg.style.transform = "translateY(0)";
+  });
+</script>
 </body>
 </html>
